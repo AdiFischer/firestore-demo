@@ -8,16 +8,16 @@ initializeApp({
 });
 const db = getFirestore();
 
-// db.collection("Pets").add({
-//     name: "Joe",
-//     species: "snake",
-//     size: "L",
-//     onerNum: "333",
+// db.collection("Customers").add({
+//     firstname: "Eli",
+//     lastname: "Fischer",
+//     onerNum: "222",
+    
 // })
 
-// db.collection("Pets").doc('ZVTCiIRstzUFFC1s9qEx').get()
-// .then(doc => console.log(doc.data()))
-// .catch(console.error)
+ db.collection("Customers").doc('3rB9sbdpq8FP2UPof92C').get()
+.then(doc => console.log(doc.data()))
+.catch(console.error)
 
 // db.collection("Pets")
 // .where ("name", "==", "Zoe")
@@ -38,14 +38,14 @@ const db = getFirestore();
 // })
 // .catch(console.error)
 
-function getPets(){
-    db.collection("Pets").doc("SoFU043eI6e4chV3seKv").get()
-    .then(doc => console.log(doc.data))
-    .catch(console.error)
-}
-db.collection("Pets")
-.doc("SoFU043eI6e4chV3seKv")
-// .where("name", "==", "Zoe")
-.update({name: "Bella", gender: "F"})
-.then(() => console.log(getPets()))
-.catch(console.error)
+// function getPets(){
+//     db.collection("Pets").doc("SoFU043eI6e4chV3seKv").get()
+//     .then(doc => console.log(doc.data))
+//     .catch(console.error)
+// }
+
+// db.collection("Pets")
+// .doc("SoFU043eI6e4chV3seKv")
+// .update({name: "Bella", gender: "F"})
+// .then(() => console.log(getPets()))
+// .catch(console.error)
