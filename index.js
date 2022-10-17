@@ -1,3 +1,9 @@
+//1. Create and connect to a Firestore db
+//2. Create a db for Petstore
+//3. Customers, Pets, Products. Create 2-3 docs in each collection.
+//4. List all pets, customers, products.
+//5. Update 1 pet, 1 product.
+
 import { initializeApp, cert } from "firebase-admin/app";
 import {getFirestore} from 'firebase-admin/firestore'
 import serviceAccount from './serviceAccount.js';
