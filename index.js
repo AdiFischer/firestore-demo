@@ -7,19 +7,59 @@
 import { initializeApp, cert } from "firebase-admin/app";
 import {getFirestore} from 'firebase-admin/firestore'
 import serviceAccount from './serviceAccount.js';
-
+ //this connect to our firebase project
 initializeApp({
 
     credential:cert(serviceAccount)
 });
 const db = getFirestore();
 
+// 1. Create:
+
 // db.collection("Customers").add({
 //     firstname: "Eli",
 //     lastname: "Fischer",
 //     onerNum: "222",
-    
 // })
+
+// 2. Read:
+
+// db.collection("instractors").doc('3rB9sbdpq8FP2UPof92C').get()
+// .then(doc =>{
+//     let instractor = doc.data()
+//     instractor.id = doc.id
+//     console.log({ ...doc.data(), id: doc.id })
+//     const myInstractor = { ...doc.data(), id: doc.id }
+//     console.log(myInstractor)
+// })
+//   .catch(console.error)
+// db.collection('instractors')
+//   .where('name', '==', 'Cassie')
+//   .where('position', '==', 'Project Director')
+//   .get()
+//   .then(collection => {
+//     collection.docs.forEach(doc =>{
+//         let instractor = doc.data()
+//         instractor.id = doc.id
+//         console.log(instractor)
+//     })
+//   })
+//   .catch(console.error)
+
+// 3. Update
+
+// db.collection('instructors')
+//  .doc('7ymtJb8Tyvjfjvcgchjvjhvh')
+//  .update({ campus: 'Boca Raton'})
+//  .then(getCassie)
+//  .catch(console.error)
+
+// db.collection('instructors')
+//  .doc('7ymtJb8Tyvjfjvcgchjvjhvh')
+//  .set({ firstName: 'Todd', sex: 'M', experience: '40 years' })
+//  .then(getCassie)
+//  .catch(console.error)
+
 
  db.collection("Customers").doc('3rB9sbdpq8FP2UPof92C').get()
 .then(doc => console.log(doc.data()))
